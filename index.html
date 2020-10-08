@@ -1,0 +1,147 @@
+<html lang="en">
+<head>
+    <title>HighRidge Poultry</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/myStylesheet.css">
+</head>
+<body>
+    <nav class="z-depth-0 grey lighten-4">
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo">
+                <img src="Img/chicken.png" alt="" style="width: 35px; margin-top: 10px;">
+            </a>
+            <span style="color: black; margin-left: 60px; font-size: 20px;">HighRidge Poultry</span>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li class="logged-in">
+                    <a href="#" class="grey-text" id="logout">Logout</a>
+                </li>
+                <li class="logged-out">
+                    <a href="#" class="grey-text modal-trigger" data-target="modal-login">Login</a>
+                </li>
+                <li>
+                    <div>
+                        <div style="position: absolute;">
+                            <pre id=signedIn style="color: red; margin: 0 auto 0 auto; margin-left: 30px; visibility: hidden;">Signed in!</pre>                            
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Login Modal -->
+
+    <div id="modal-login" class="modal">
+        <div class="modal-content">
+            <h4>
+                Login
+            </h4>
+            <br>
+            <form id="login-form">
+                <div class="input-field">
+                    <input type="email" id="login-email" required>
+                    <label for="login-email">Email Address</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="login-password" required>
+                    <label for="login-password">Choose Password</label>
+                </div>
+                <button class="btn red darken-2 z-depth-0"> Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Create Truck Modal -->
+
+    <div id="modal-create" class="modal">
+        <div id="modal-content" style="margin-left: 20px;">
+            <br>
+            <h4> Create Truck</h4>
+            <form id="create-form">
+                <div class="input-field">
+                    <input type="text" id="truckNo" required>
+                    <label for="truckNo">Truck Number</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="updatedMileageDry" required>
+                    <label for="updatedMileageDry">Updated Mileage (Last Dry service)</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="updatedMileageFull" required>
+                    <label for="updatedMileageFull">Updated Mileage (Last Full service)</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="currentMileage" required>
+                    <label for="currentMileage">Current Mileage</label>
+                </div>
+                <div class="input-field">
+                    <label for="dryService">Dry Service Received</label> <br><br>
+                    <input type="datetime-local" id="dryService" required>
+                </div>
+                <div class="input-field">
+                    <label for="fullService">Full Service Received</label> <br><br>
+                    <input type="datetime-local" id="fullService" required>
+                </div>
+                <div class="input-field">
+                    <label for="dotService">DOT Inspection Received</label> <br><br>
+                    <input type="datetime-local" id="dotService" required>
+                </div>
+                <button class="btn red darken-2 z-depth-0"> Create</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Trucks List -->
+    <div>
+        <div style="margin: 40 auto 0 auto; width: 95%;">
+            <div class="heading">
+                <h5>HighRidge Poultry Feed Trucks</h5>
+                <br>
+                <div style="display: flex; align-items: center; justify-content: center;">
+                    <h8 style="color: orange; margin-right: 20px;">Orange = Warning</h8>
+                    <h8 style="color: red;">Red = Service Due</h8>
+                </div>
+            </div>
+            <div class="semis" style="background-color: black;  border-top: 2px solid white">
+
+            </div>
+            <br>
+            <div style="text-align: center;">
+                <a href="#" class="modal-trigger" id=btn data-target="modal-create"> + Add Truck</a>
+            </div>
+        </div>
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-firestore.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyCCexIPNwxSDfJQJIy2jI3rHsa2mLGQu40",
+          authDomain: "highridge-poultry.firebaseapp.com",
+          databaseURL: "https://highridge-poultry.firebaseio.com",
+          projectId: "highridge-poultry",
+          storageBucket: "highridge-poultry.appspot.com",
+          messagingSenderId: "884608630801",
+          appId: "1:884608630801:web:da4ad251a34e9f21eff1b0",
+          measurementId: "G-G077H2YB2T"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        //Make authentication and firebase reference
+        const auth = firebase.auth();
+        const db = firebase.firestore(); 
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+</html>

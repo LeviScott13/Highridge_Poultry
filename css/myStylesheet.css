@@ -1,0 +1,73 @@
+body{
+    background-image: url('../Img/semi.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+h5{
+    color: white;
+}
+.heading{
+    background-color: black;
+    text-align: center;
+    padding: 10px 3px;
+    padding-bottom: 40px;
+}
+ul{
+    margin: 0px;
+}
+li{
+    display: inline;
+    padding: 30px 30px;
+    color: navy;
+}
+
+table{
+    margin: 10 auto 0 auto;
+    margin: 0px;
+}
+tr{
+    background-color: whitesmoke;
+}
+td{
+    text-align: center;
+    padding-top: 20px;
+    border: 2px solid grey;
+}
+.footer{
+    background-color: transparent;
+}
+
+#btn{
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: 2px solid red;
+}
+#btn:hover {
+    background-color: white;
+    color: black;
+}
+#editBtn{
+    color: navy;
+    padding: 2px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+#btn:hover {
+    background-color: white;
+    color: black;
+}
+#editContainer{
+    background-color: white;
+    text-align: right;
+}
