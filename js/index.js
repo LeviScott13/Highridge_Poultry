@@ -156,7 +156,7 @@ function updateTruck(){
     })
     //Truck 2
     db.collection("semis").doc("jRlBQdsznP7XkNCmHfts").update({
-        truckNo: document.getElementById("newTruckNum1").value,
+        truckNo: document.getElementById("newTruckNum2").value,
         updatedMileageDry: document.getElementById("newUpdatedMileageDry2").value,
         updatedMileageFull: document.getElementById("newUpdatedMileageFull2").value,
         currentMileage: document.getElementById("newCurrentMileage2").value,
