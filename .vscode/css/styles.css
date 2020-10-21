@@ -1,0 +1,66 @@
+td{
+    padding: 15px;
+}
+th{
+    padding: 10px;
+}
+form {
+    width: 100%;
+    text-align: left;
+    padding: 20px; 
+    border-radius: 5px;
+    border-top: 2px solid gray;
+}
+.input-groups {
+    margin: 10px 0px 10px 0px;
+    text-align: center;
+}
+.input-groups label {
+    display: block;
+    text-align: center;
+    margin: 3px;
+}
+.input-groups input {
+    height: 10px;
+    width: 20%;
+    padding: 10px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid orange;
+}
+.btn {
+    padding: 10px;
+    font-size: 15px;
+    color: white;
+    background: #5F9EA0;
+    border: none;
+    border-radius: 5px;
+}
+.edit_btn {
+    text-decoration: none;
+    padding: 2px 5px;
+    background: #2E8B57;
+    color: white;
+    border-radius: 3px;
+}
+
+.del_btn {
+    text-decoration: none;
+    padding: 2px 5px;
+    color: white;
+    border-radius: 3px;
+    background: #800000;
+}
+#nav-links{
+    color: black;
+}
+.msg {
+    margin: 30px auto; 
+    padding: 10px; 
+    border-radius: 5px; 
+    color: #3c763d; 
+    background: #dff0d8; 
+    border: 1px solid #3c763d;
+    width: 50%;
+    text-align: center;
+}
